@@ -1,0 +1,80 @@
+#mylofter-top-bar{
+    background-color: black;
+    height: 64px;
+    margin: 0px 7.2px;
+    padding: 0px;
+  }
+  #mylofter-top-bar-content{
+    position: relative;
+    left:30%;
+  }
+  #search-bar{
+    background-color: white;
+    position: relative;
+    margin: 0px;
+    width: 180px;
+    height: 32px;
+    border-radius: 20px;
+    top: -2px;
+    display: inline-block;
+    border: none;
+    outline: none;
+  }
+  .search-input{
+    position: relative;
+    top: 15%;
+    left: 15px;
+    width: 120px;
+    z-index: 99;
+    border: none;
+    background-color: transparent;
+  }
+  #search{
+    position: relative;
+    left: 5px;
+    top: 27%;
+    float: left;
+  }
+  .settingsandothers{
+    position: relative;
+    display: inline;
+    width: 56px;
+    height: 64px;
+    margin: 0px;
+    padding: 0px;
+    top: 20px;
+    float: left;
+  }
+
+    #mylofter-main-bar{
+        padding: none;
+        margin: none;
+    }
+    #publish-bar{
+        float: left;
+        border: black;
+        background-color: white;
+        position: relative;
+        left: 300px;
+        width: 45%;
+        margin-top: 30px;
+        margin-left: 7.2px;
+        display: inline;
+        list-style: none;
+    }
+    a.publishlink{
+        position: relative;
+        float: left;
+        top: 20px;
+        height: 110px;
+        width: 110px;
+        text-decoration: none;
+        text-align:center;
+        color: #477979;
+    }
+    #user{
+        float: left;
+        height: 110px;
+        width: 20px;
+        margin-right: 100px; ;
+    }
