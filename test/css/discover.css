@@ -1,0 +1,157 @@
+#all{
+    position: absolute;
+    margin: 0px auto;
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    text-align: center;
+  }
+  
+  #mylofter-top-bar{
+    background-color: black;
+    width: 100%;
+    height: 64px;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 30px;
+    }
+    #mylofter-top-bar-content{
+      width: 800px;
+      margin: 0px auto;
+      padding: 0px;
+    }
+    #search-bar{
+      background-color: white;
+      position: relative;
+      margin: 0px;
+      width: 180px;
+      height: 32px;
+      border-radius: 20px;
+      top: -2px;
+      display: inline-block;
+      border: none;
+      outline: none;
+    }
+    .search-input{
+      position: relative;
+      top: 15%;
+      left: 15px;
+      width: 120px;
+      z-index: 99;
+      border: none;
+      background-color: transparent;
+    }
+    #search{
+      position: relative;
+      left: 5px;
+      top: 27%;
+      float: left;
+    }
+    .settingsandothers{
+      position: relative;
+      display: inline;
+      width: 56px;
+      height: 64px;
+      margin: 0px;
+      padding: 0px;
+      top: 20px;
+      float: left;
+    }
+  #allcontent{
+    width: 80%;
+    margin: 0px auto;
+    clear: both;
+    text-align: center;
+  }
+    #mylofter-main-bar{
+      padding: 0px;
+      width: 1080px;
+      text-align: left;
+      margin: 0px auto;
+    }
+    #publish-bar{
+      border: black;
+      background-color: white;
+      position: relative;
+      width: 750px;
+      height: 120px;
+      padding: 0px;
+      box-shadow: 0px 1px 3px 0px;
+      list-style: none;
+      display: inline-block;
+      text-align: left;
+    }
+    .publishlink-list{
+      text-align: center;
+      display: inline;
+      width: 800px;
+      margin: 0px;
+      padding: 0px;
+      list-style: none;
+    }
+    .publishlink-list li{
+      text-align: center;
+      display: inline-block;
+      width: 13%;
+      margin-left: 8px;
+      margin-right: 8px;
+      padding: 0px;
+      list-style: none;
+    }
+    a.publishlink{
+      display: inline;
+      height: 110px;
+      width: 110px;
+      text-decoration: none;
+      text-align:center;
+      color: #477979;
+    }
+    #user{
+        float: left;
+        height: 110px;
+        width: 20px;
+        margin-right: 100px; ;
+    }
+    
+    .member-article-list{
+      margin: 0px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      width: 750px;
+    }
+    .member-list{
+      position: relative;
+      margin: 0px;
+      padding: 0px;
+      margin-bottom: 20px;
+    }
+    .member-img{
+      float: left;
+      margin: 0px;
+      margin-right: 5px;
+      box-shadow: 0px 1px 3px 0px;
+      height: 50px;
+      width: 50px;
+      clear: both;
+    }
+    .member-img-size{
+      height: 50px;
+      width: 50px;
+    }
+    .member-content-triangle{
+      z-index: -50;
+      width: 0px;
+      height: 0px;
+      margin-left: -20px;
+      box-shadow: 0px -1px 0px 0px; 
+      border: 20px solid transparent;
+      border-top: 20px solid #fff;
+    }
+    .member-content{
+      float: right;
+      background-color: #fff;
+      margin-bottom: 30px;
+      box-shadow: 0px 1px 3px 0px;
+      width: 670px;
+      height: 200px;
+    }

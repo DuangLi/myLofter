@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>LOFTER（乐乎） -让兴趣，更有趣</title>
-  <link href="css/mylofter.css" type="text/css" rel="stylesheet" />
+  <link href="css/discover.css" type="text/css" rel="stylesheet" />
   <style>
     .member-content-txt{
       position: relative;
@@ -33,7 +33,7 @@
           <span><a href="mylofter .html" style="text-decoration: none;color:#477979">首页</a></span>
         </div>
         <div class="settingsandothers" title="发现">
-          <span><a href="./discovery.html" style="text-decoration: none;color:#477979">发现</a></span>
+          <span><a href="discovery/discovery.html" style="text-decoration: none;color:#477979">发现</a></span>
         </div>
         <div class="settingsandothers" title="APP">
           <span><a href="mylofter .html" style="text-decoration: none;color:#477979">APP</a></span>
@@ -122,20 +122,55 @@
     </div>
     <div id="allcontent">
       <div id="mylofter-main-bar"><!--主体区块-->
-      <div id="publish-bar"><!--发表区块-->
-        <div>
-          <ul class="publishlink-list">
-            <li><a target="_blank" id="user" href="user/userspace.html"><img src="images/001.jpg" /></a></li>
-            <li><a class="publishlink" href="user/publish/text.html"><img src="icons/txt.png" height="60px" width="60px"><br/>文  本</a></li>
-            <li><a class="publishlink" href="user/publish/photo.html"><img src="icons/camera-Fill.png" height="60px" width="60px"><br/>图  片</a></li>
-            <li><a class="publishlink" href="user/publish/music.html"><img src="icons/music-Fill.png" height="60px" width="60px"><br/>音  乐</a></li>
-            <li><a class="publishlink" href="user/publish/vedio.html"><img src="icons/vedio.png" height="60px" width="60px"><br/>视  频</a></li>
-            <li><a class="publishlink" href="user/publish/article.html"><img src="icons/word.png" height="60px" width="60px"><br/>长文章</a></li>
-          </ul>
-        </div>
-      </div>
       <!--帖子区块-->
       <div class="member-article-list">
+        <script>
+          function waterfall(parent,blocks){
+            let theParent=document.getElementById(parent);
+            let arrBlock=GetArrofChild(parent,blocks);
+            let blockWidth=arrBlock[0].offsetWidth; 
+            let num=Math.floor(document.documentElement.clientWidth/blockWidth);
+            theParent.style.cssText="width:" +blockWidth*num+"px;margin:0 auto;";
+              
+            let HeightArr=[];
+            for(let i=0;i<arrBlock.length;i++){
+              let blockHeight=arrBlock[i].offsetHeight;
+              if(i<num){
+                  HeightArr[i]=blockHeight;
+              }
+              else{
+                let minHeight=Math.min.apply(null,HeightArr);
+                let minHeightIndex=GetMinindex(HeightArr,minHeight);
+                arrBlock[i].style.position="absolute";
+                arrBlock[i].style.top=minH+"px";
+                arrBlock[i].style.left=arrBlock[minHeightIndex].offsetLeft+"px";
+                HeightArr[minHeightIndex]+=arrBlock[i].offsetHeight;
+              }
+            } 
+          }
+
+          function GetArrofChild(parent,blocks){
+            let childs=document.getElementsByTagName("*");
+            let arrs=[];
+
+            for(let i=0;i<childs.length;i++){
+              if(childs[i].className==className){
+                arrs.push(childs[i]);
+              }
+            }
+            return arrs;
+          }
+
+          function GetMinindex(HeightArr,minHeight){
+            for(let i in HeightArr)
+            {
+              if(HeightArr[i]==minHeight)
+              {
+                return i;  
+              }
+            }
+          }
+        </script>
         <div class="member-list">
           <div class="member-img">
             <a target="_blank" href="memberspaces/memberspace001.html"><img class="member-img-size" src="images/3.jpg" /></a>
@@ -143,8 +178,6 @@
           <div class="member-content">
             <div class="member-content-triangle"></div>
             <div class="member-content-txt">
-              <p>为什么为什么为什么为什么为什么为什么为什么为什么为什么为什么为什么为什么为什么为什么为什么为什么为什么为什么为什么为什么为什么为什么为什么为什么为什么为什么</p>
-              <p>hjhkhkjhkhkjhkjhkjhjk</p>
             </div>
           </div>
         </div>
@@ -229,95 +262,6 @@
           </div>
         </div>
 
-      </div>
-      </div>
-      <div id="mylofter-side-bar"><!--右部区块-->
-      <div id="mylofter-name-bar"><!--名称框-->
-        <div id="namebox">
-          <div id="nickname">
-            <p class="Nickname">小小黑</p>
-            <p class="Nickname">xiaoxiaohei45064</p>
-          </div>
-          <div class="huakuai">
-            <a><img class="huakuai" src="images/001.jpg"></a>
-          </div>
-        </div>
-        <div id="interestnum">
-          <a href="user/userspace.html" style="text-decoration: none;">
-            <div class="textstyle1">
-              <p>关  注</p>
-            </div>
-            <div class="textstyle2">
-              <p>40</p>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div id="mylofter-middle-bar"><!--中间列表块-->
-        <a id="mylofter-middle-bar-creater" href="user/creater.html" ><p id="mylofter-middle-bar-creater-p">创作者中心</p></a>
-        <div id="listbox">
-          <div class="line"></div>
-          <div id="list1" class="listitems">
-            <a class="list_link" href="user/userspace.html">文章</a>
-          </div>
-          <div class="line"></div>
-          <div id="list2" class="listitems">
-            <a class="list_link" href="user/userspace.html">合集</a>
-          </div>
-          <div class="line"></div>
-          <div id="list3" class="listitems">
-            <a class="list_link" href="user/userspace.html">钱包</a>       
-          </div>
-          <div class="line"></div>
-          <div id="list4" class="listitems">
-            <a class="list_link" href="user/userspace.html">草稿</a>
-          </div>
-          <div class="line"></div>
-          <div id="list5" class="listitems">
-            <a style="color:gray;" class="list_link" href="user/userspace.html">个人主页设置</a>
-          </div>
-        </div>
-      </div>
-      <div class="mylofter-banner-bar"><!--横条广告块-->
-        <a class="mylofter-banner-bar" href="user/userspace.html" target="_blank"></a>
-      </div>
-      <div id="mylofter-img-bar"><!--图像广告块-->
-        <a id="mylofter-img-bar-link" href="user/userspace.html" target="_blank"><img src="images/001.jpg" height="200" width="230"/></a>
-      </div>
-      <div id="mylofter-download-bar"><!--二维码下载块-->
-        <div id="mylofter-QRcode-bar">
-          <div id="QRcode-title">
-            <p style="font-weight: bold;margin: 0px 0px 15px 0px;">使用手机访问Lofter</p>
-          </div>
-          <div class="QRcode">
-            <img class="QRcode-img" src="images/2.jpg" />
-            <div class="QRcode-information">
-              <p style="font-weight: bold;">安卓APP下载</p>
-              <p>扫码下载安卓Lofter APP</p>
-            </div>
-          </div>
-          <div class="QRcode">
-            <img class="QRcode-img" src="images/3.jpg" />
-            <div class="QRcode-information" style="position: relative;bottom: 0px;">
-              <p style="font-weight: bold;" >微信小程序</p>
-              <p>使用微信扫码打开Lofter微信小程序</p>
-            </div>
-          </div>
-          <div class="QRcode">
-            <img class="QRcode-img" src="images/4.jpg" />
-            <div class="QRcode-information" style="position: relative;bottom: 0px;">
-              <p style="font-weight: bold;">QQ小程序</p>
-              <p>使用微信扫码打开Lofter QQ小程序</p>
-            </div>
-          </div>
-          <div class="QRcode">
-            <img class="QRcode-img" src="images/5.jpg" />
-            <div class="QRcode-information">
-              <p style="font-weight: bold;">苹果APP下载</p>
-              <p>扫码下载苹果Lofter APP</p>
-            </div>
-          </div>
-        </div>
       </div>
       </div>
     </div>
