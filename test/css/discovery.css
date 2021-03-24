@@ -11,12 +11,14 @@ a{
   text-decoration: none;
 }
 #discovery-top-bar{
+  position: relative;
   background-color: black;
   width: 100%;
   height: 64px;
   margin: 0px;
   padding: 0px;
   margin-bottom: 30px;
+  clear: both;
 }
 #discovery-top-bar-content{
   width: 800px;
@@ -60,17 +62,18 @@ a{
   top: 20px;
   float: left;
 }
-#allcontent{
-width: 80%;
-margin: 30px auto;
-clear: both;
-text-align: center;
+.allcontent{
+  width: 1360px;
+  display: block;
+  margin: 0 auto;
+  clear: both;
+  text-align: center;
 }
 
 .member_article_list{
+  width: 1360px;
   position: relative;
   margin: 30px auto;
-  width: 1440px;
 }
 .member_list{
   float: left;
