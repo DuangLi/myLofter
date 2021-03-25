@@ -1,0 +1,22 @@
+.member-content-bottombar{
+    position: relative;
+    margin: 20px auto;
+    line-height: 20px;
+    width: 600px;
+    height: 20px;
+}
+.member-content-bottom-rightspans{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    clear: both;
+    text-align: center;
+}
+.rspan{
+    float: left;
+    display: block;
+    color: #bdbdbd;
+    margin-left: 20px;
+}
