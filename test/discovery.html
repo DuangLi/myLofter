@@ -29,7 +29,7 @@
       margin: -30px 0 50px 0;
       padding: 0;
     }
-    #discovery-tab-bar-content{
+    #buttonbox{
       list-style: none;
       display: block;
       width: 900px;
@@ -38,24 +38,8 @@
       margin: 0 auto;
       padding: 0;
     }
-    #discovery_tab_bar_ul{
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: inline;
-      width: 700px;
-      text-align: center;
-    }
-    .discovery_tab_bar_li{
-      list-style: none;
+    .nocolor{
       display: inline-block;
-      width: 120px;
-      text-align: left;
-      margin: 0px 8px;
-      padding: 0;
-    }
-    .discovery-tab-bar-link{
-      display: inline;
       width: 120px;
       height: 90px;
       text-align: center;
@@ -65,8 +49,30 @@
       font-size: 25px;
       color: #000;
       font-weight: bold;
+      background-color: #fff;
+      border: none;
+      cursor: pointer;
     }
-    
+    .color{
+      display: inline-block;
+      width: 120px;
+      height: 90px;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      line-height: 85px;
+      font-size: 25px;
+      color: #000;
+      font-weight: bold;
+      background-color:chocolate;
+      border: none;
+      cursor: pointer;
+    }
+    .div{
+      width: 1360px;
+      margin: 10px auto;
+      display: none;
+    }
   </style>
 </head>
 <body style="background-color: #ededef;margin: o;padding: 0;">
@@ -171,134 +177,135 @@
       </div>
       </div>
       <div id="discovery-tab-bar"><!--tab导航栏区块-->
-        <div id="discovery-tab-bar-content">
-          <ul id="discovery_tab_bar_ul">
-            <li class="discovery_tab_bar_li">
-              <a class="discovery-tab-bar-link" href="member.html">趋势</a>
-            </li>
-            <li class="discovery_tab_bar_li">
-              <a class="discovery-tab-bar-link" href="member.html">话题</a>
-            </li>
-            <li class="discovery_tab_bar_li">
-              <a class="discovery-tab-bar-link" href="member.html">标签</a>
-            </li>
-            <li class="discovery_tab_bar_li">
-              <a class="discovery-tab-bar-link" href="member.html">达人</a>
-            </li>
-            <li class="discovery_tab_bar_li">
-              <a class="discovery-tab-bar-link" href="member.html">专题</a>
-            </li>
-            <li class="discovery_tab_bar_li">
-              <a class="discovery-tab-bar-link" href="member.html">风格模板</a>
-            </li>
-          </ul>
+        <div class="buttonbox">   
+          <button class="color" type="button">趋势</button>
+            
+          <button class="nocolor" type="button">话题</button>
+            
+          <button class="nocolor" type="button">标签</button>
+      
+          <button class="nocolor" type="button">达人</button>
+       
+          <button class="nocolor" type="button">专题</button>
+         
+          <button class="nocolor" type="button">风格模板</button>
+        
         </div>
       </div>
     </div>
     <div class="allcontent">
-      <div class="discovery-main-bar"><!--主体区块-->
+      <div class="divs"><!--主体区块-->
       <!--帖子区块-->
-        <div class="member_article_list">  
-          <div class="member_list">
-            
-            <img src="images/11.jpg" width="180px" height="220px" />
-          </div>
-          <div class="member_list">
-            
-            <img src="images/12.jpg" width="180px" height="180px" />
-          </div>
-          <div class="member_list">
-            
-            <img src="images/13.jpg" width="180px" height="250px" />
-          </div>
-          <div class="member_list">
-            
-            <img src="images/14.jpg" width="180px" height="100px" />
-          </div>
-          <div class="member_list">
-            
-            <img src="images/7.jpg" width="180px" height="220px" />
-          </div>
-          <div class="member_list">
-            
-            <img src="images/9.jpg" width="180px" height="190px" />
-          </div>
-          <div class="member_list">
-            
-            <img src="images/8.jpg" width="180px" height="280px" />
-          </div>
-          <div class="member_list">
-            
-            <img src="images/10.jpg" width="180px" height="240px" />
-          </div>
-          <div class="member_list">
-            
-            <img src="images/11.jpg" width="180px" height="220px" />
-          </div>
-          <div class="member_list">
-            
-            <img src="images/12.jpg" width="180px" height="180px" />
-          </div>
-          <div class="member_list">
-            
-            <img src="images/13.jpg" width="180px" height="250px" />
-          </div>
-          <div class="member_list">
-            
-            <img src="images/14.jpg" width="180px" height="100px" />
-          </div>
-          <div class="member_list">
-            
-            <img src="images/7.jpg" width="180px" height="220px" />
-          </div>
-          <div class="member_list">
-            
-            <img src="images/9.jpg" width="180px" height="190px" />
-          </div>
-          <div class="member_list">
-            
-            <img src="images/8.jpg" width="180px" height="280px" />
-          </div>
-          <div class="member_list">
-            
-            <img src="images/10.jpg" width="180px" height="240px" />
-          </div>
-          <div class="member_list">
-            
-            <img src="images/11.jpg" width="180px" height="220px" />
-          </div>
-          <div class="member_list">
-            
-            <img src="images/12.jpg" width="180px" height="180px" />
-          </div>
-          <div class="member_list">
-            
-            <img src="images/13.jpg" width="180px" height="250px" />
-          </div>
-          <div class="member_list">
-            
-            <img src="images/14.jpg" width="180px" height="100px" />
-          </div>
-          <div class="member_list">
-            <img src="images/7.jpg" width="180px" height="220px" />
-          </div>
-          <div class="member_list">
-            
-            <img src="images/9.jpg" width="180px" height="190px" />
-          </div>
-          <div class="member_list">
-            
-            <img src="images/8.jpg" width="180px" height="280px" />
-          </div>
-          <div class="member_list">
-            
-            <img src="images/10.jpg" width="180px" height="240px" />
-          </div>
+        <div class="div" style="display: block;">
+          <div class="member_article_list">  
+            <div class="member_list">
+              
+              <img src="images/11.jpg" width="180px" height="220px" />
+            </div>
+            <div class="member_list">
+    
+              <img src="images/12.jpg" width="180px" height="180px" />
+            </div>
+            <div class="member_list">
+              
+              <img src="images/13.jpg" width="180px" height="250px" />
+            </div>
+            <div class="member_list">
+              
+              <img src="images/14.jpg" width="180px" height="100px" />
+            </div>
+            <div class="member_list">
+              
+              <img src="images/7.jpg" width="180px" height="220px" />
+            </div>
+            <div class="member_list">
+              
+              <img src="images/9.jpg" width="180px" height="190px" />
+            </div>
+            <div class="member_list">
+              
+              <img src="images/8.jpg" width="180px" height="280px" />
+            </div>
+            <div class="member_list">
+              
+              <img src="images/10.jpg" width="180px" height="240px" />
+            </div>
+            <div class="member_list">
+              
+              <img src="images/11.jpg" width="180px" height="220px" />
+            </div>
+            <div class="member_list">
+              
+              <img src="images/12.jpg" width="180px" height="180px" />
+            </div>
+            <div class="member_list">
+              
+              <img src="images/13.jpg" width="180px" height="250px" />
+            </div>
+            <div class="member_list">
+              
+              <img src="images/14.jpg" width="180px" height="100px" />
+            </div>
+            <div class="member_list">
+              
+              <img src="images/7.jpg" width="180px" height="220px" />
+            </div>
+            <div class="member_list">
+              
+              <img src="images/9.jpg" width="180px" height="190px" />
+            </div>
+            <div class="member_list">
+              
+              <img src="images/8.jpg" width="180px" height="280px" />
+            </div>
+            <div class="member_list">
+              
+              <img src="images/10.jpg" width="180px" height="240px" />
+            </div>
+            <div class="member_list">
+              
+              <img src="images/11.jpg" width="180px" height="220px" />
+            </div>
+            <div class="member_list">
+              
+              <img src="images/12.jpg" width="180px" height="180px" />
+            </div>
+            <div class="member_list">
+              
+              <img src="images/13.jpg" width="180px" height="250px" />
+            </div>
+            <div class="member_list">
+              
+              <img src="images/14.jpg" width="180px" height="100px" />
+            </div>
+            <div class="member_list">
+              <img src="images/7.jpg" width="180px" height="220px" />
+            </div>
+            <div class="member_list">
+              
+              <img src="images/9.jpg" width="180px" height="190px" />
+            </div>
+            <div class="member_list">
+              
+              <img src="images/8.jpg" width="180px" height="280px" />
+            </div>
+            <div class="member_list">
           
+              <img src="images/10.jpg" width="180px" height="240px" />
+            </div>
+            
+          </div>
         </div>
+        <div class="div">这是没做的话题div</div>
+        <div class="div">这是没做的标签div</div>
+        <div class="div">这是没做的达人div</div>
+        <div class="div">这是没做的专题div</div>
+        <div class="div">这是没做的风格模板div</div>
+        
       </div>
     </div>
   </div>
+  <script src="js/tabSwitch.js"></script>
   <script src="js/waterfall.js"></script>
 </body>
 </html>

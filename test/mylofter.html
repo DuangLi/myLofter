@@ -6,18 +6,36 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>LOFTER（乐乎） -让兴趣，更有趣</title>
   <link href="css/mylofter.css" type="text/css" rel="stylesheet" />
-  <link href="like.css" type="text/css" rel="stylesheet" />
+  <link href="css/like.css" type="text/css" rel="stylesheet" />
   <style>
-    .member-content-txt{
-      position: relative;
-      text-align: left;
-      display: block;
-      margin: 0px;
-      padding: 0px;
+    button{
+      border: none;
+      background-color: transparent;
     }
-    footer{
-      text-align: center;
-      clear: both;
+    .likebutton{
+      background-color: transparent;
+      border: none; 
+    }
+    .listimg-nochange{
+      background-color: transparent;
+      border: none;
+      width: 100px;
+      height: 100px;
+    }
+    .listimg-change{
+      background-color: transparent;
+      border: none;
+      width: 400px;
+      height: 400px;
+    }
+    .member-list-comment{
+      display: none;
+      float: right;
+      width: 670px;
+      margin: -10px 0 20px 0;
+      background-color: #fff;
+      text-align: left;
+      box-shadow: 0px 1px 3px 0px;
     }
   </style>
 </head>
@@ -123,499 +141,509 @@
     </div>
     <div id="allcontent">
       <div id="mylofter-main-bar"><!--主体区块-->
-      <div id="publish-bar"><!--发表区块-->
-        <div>
-          <ul class="publishlink-list">
-            <li><a target="_blank" id="user" href="user/userspace.html"><img src="images/001.jpg" /></a></li>
-            <li><a class="publishlink" href="user/publish/text.html"><img src="icons/txt.png" height="60px" width="60px"><br/>文  本</a></li>
-            <li><a class="publishlink" href="user/publish/photo.html"><img src="icons/camera-Fill.png" height="60px" width="60px"><br/>图  片</a></li>
-            <li><a class="publishlink" href="user/publish/music.html"><img src="icons/music-Fill.png" height="60px" width="60px"><br/>音  乐</a></li>
-            <li><a class="publishlink" href="user/publish/vedio.html"><img src="icons/vedio.png" height="60px" width="60px"><br/>视  频</a></li>
-            <li><a class="publishlink" href="user/publish/article.html"><img src="icons/word.png" height="60px" width="60px"><br/>长文章</a></li>
-          </ul>
-        </div>
-      </div>
-      <!--帖子区块-->
-      <div class="member-article-list">
-        <div class="member-list">
-          <div class="member-img">
-            <a target="_blank" href="memberspaces/memberspace001.html"><img class="member-img-size" src="images/3.jpg" /></a>
-          </div>
-          <div class="member-content">
-            <div class="member-content-triangle"></div>
-            <div class="member-content-txt">
-              <p>这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-              </p>
+        <div id="publish-bar"><!--发表区块-->
+          <div class="modal"><!--模态框-->
+            <div class="modal-header">
+              <p class="title">小小黑</p>
             </div>
-            <div class="member-content-bottombar">
-              <div class="member-content-bottom-rightspans">
-                <span class="rspan"><a href="mylofter.html" style="color: #bdbdbd;">热度(18)</a></span>
-                <span class="rspan"><a href="mylofter.html" style="color: #bdbdbd;">评论</a></span>
-                <span class="rspan"><a href="mylofter.html" style="color: #bdbdbd;">分享</a></span>
-                <span class="rspan"><a href="mylofter.html" style="color: #bdbdbd;">推荐</a></span>
-                <span class="rspan"><a href="mylofter.html" style="color: #bdbdbd;"><img src="icons/like.png" alt="" width="18px" height="18px"></a></span>
+            <textarea class="modal-content">
+              
+            </textarea>
+            <div class="modal-footer">
+              <button class="closebutton">关闭</button>
+            </div>
+          </div>
+          <div class="mask"></div>
+          <div>
+            <ul class="publishlink-list">
+              <li><a target="_blank" id="user" href="user/userspace.html" style="z-index: 120;"><img src="images/001.jpg" /></a></li>
+              <li><button class="publishlink" href="user/publish/text.html" type="button"><img src="icons/txt.png" height="60px" width="60px"><br/>文  本</button></li>
+              <li><button class="publishlink" href="user/publish/photo.html" type="button"><img src="icons/camera-Fill.png" height="60px" width="60px"><br/>图  片</button></li>
+              <li><button class="publishlink" href="user/publish/music.html" type="button"><img src="icons/music-Fill.png" height="60px" width="60px"><br/>音  乐</button></li>
+              <li><button class="publishlink" href="user/publish/vedio.html" type="button"><img src="icons/vedio.png" height="60px" width="60px"><br/>视  频</button></li>
+              <li><button class="publishlink" href="user/publish/article.html" type="button"><img src="icons/word.png" height="60px" width="60px"><br/>长文章</button></li>
+            </ul>
+          </div>
+        </div>
+        <!--帖子区块-->
+        <div class="member-article-list">
+          <div class="member-list">
+            <div class="member-img">
+              <a target="_blank" href="memberspaces/memberspace001.html"><img class="member-img-size" src="images/3.jpg" /></a>
+            </div>
+            <div class="member-content">
+              <div class="member-content-triangle"></div>
+              <div class="member-content-txt">
+                <button class="listimg-nochange"><img src="images/5.jpg" /></button>
+                <p>这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                </p>
+              </div>
+              <div class="member-content-bottombar">
+                <div class="member-content-bottom-rightspans">
+                  <span class="rspan"><button href="mylofter.html" style="color: #bdbdbd;">热度(18)</button></span>
+                  <span class="rspan"><button class="commentbutton" href="mylofter.html" style="color: #bdbdbd;">评论</button></span>
+                  <span class="rspan"><button href="mylofter.html" style="color: #bdbdbd;">分享</button></span>
+                  <span class="rspan"><button href="mylofter.html" style="color: #bdbdbd;">推荐</button></span>
+                  <span class="rspan"><button class="likebutton" href="mylofter.html" type="button"><img class="likeimg" id="nochange" src="icons/like.png" alt="" width="18px" height="18px"/></button></span>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div class="member-list">
-          <div class="member-img">
-            <a target="_blank" href="memberspaces/memberspace001.html"><img class="member-img-size" src="images/3.jpg" /></a>
-          </div>
-          <div class="member-content">
-            <div class="member-content-triangle"></div>
-            <div class="member-content-txt">
-              <p>这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-              </p>
+            <div class="member-list-comment" id="hide">
+              <p>假装我写了一条评论</p>
+              <p>这个评论板块没做过</p>
+              <p>这个评论板块非常的丑</p>
+              <p>之后的评论板块都是复制粘贴的</p>
             </div>
-            <div class="member-content-bottombar">
-              <div class="member-content-bottom-rightspans">
-                <span class="rspan"><a href="mylofter.html" style="color: #bdbdbd;">热度(18)</a></span>
-                <span class="rspan"><a href="mylofter.html" style="color: #bdbdbd;">评论</a></span>
-                <span class="rspan"><a href="mylofter.html" style="color: #bdbdbd;">分享</a></span>
-                <span class="rspan"><a href="mylofter.html" style="color: #bdbdbd;">推荐</a></span>
-                <span class="rspan"><a href="#" style="color: #bdbdbd;"><img src="icons/like.png" alt="" width="18px" height="18px"></a></span>
+          </div>
+          <div class="member-list">
+            <div class="member-img">
+              <a target="_blank" href="memberspaces/memberspace001.html"><img class="member-img-size" src="images/3.jpg" /></a>
+            </div>
+            <div class="member-content">
+              <div class="member-content-triangle"></div>
+              <div class="member-content-txt">
+                <button class="listimg-nochange"><img src="images/5.jpg" /></button>
+                <p>这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                </p>
+              </div>
+              <div class="member-content-bottombar">
+                <div class="member-content-bottom-rightspans">
+                  <span class="rspan"><button href="mylofter.html" style="color: #bdbdbd;">热度(18)</button></span>
+                  <span class="rspan"><button class="commentbutton" href="mylofter.html" style="color: #bdbdbd;">评论</button></span>
+                  <span class="rspan"><button href="mylofter.html" style="color: #bdbdbd;">分享</button></span>
+                  <span class="rspan"><button href="mylofter.html" style="color: #bdbdbd;">推荐</button></span>
+                  <span class="rspan"><button class="likebutton" href="mylofter.html" type="button"><img class="likeimg" id="nochange" src="icons/like.png" alt="" width="18px" height="18px"/></button></span>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div class="member-list">
-          <div class="member-img">
-            <a target="_blank" href="memberspaces/memberspace002.html"><img class="member-img-size" src="images/3.jpg" /></a>
-          </div>
-          <div class="member-content">
-            <div class="member-content-triangle"></div>
-            <div class="member-content-txt">
-              <p>这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-              </p>
+            <div class="member-list-comment" id="hide">
+              <p>假装我写了一条评论</p>
+              <p>这个评论板块没做过</p>
+              <p>这个评论板块非常的丑</p>
+              <p>之后的评论板块都是复制粘贴的</p>
             </div>
-            <div class="member-content-bottombar">
-              <div class="member-content-bottom-rightspans">
-                <span class="rspan"><a href="mylofter.html" style="color: #bdbdbd;">热度(18)</a></span>
-                <span class="rspan"><a href="mylofter.html" style="color: #bdbdbd;">评论</a></span>
-                <span class="rspan"><a href="mylofter.html" style="color: #bdbdbd;">分享</a></span>
-                <span class="rspan"><a href="mylofter.html" style="color: #bdbdbd;">推荐</a></span>
-                <span class="rspan"><a href="#" style="color: #bdbdbd;"><img src="icons/like.png" alt="" width="18px" height="18px"></a></span>
+          </div>
+          <div class="member-list">
+            <div class="member-img">
+              <a target="_blank" href="memberspaces/memberspace001.html"><img class="member-img-size" src="images/3.jpg" /></a>
+            </div>
+            <div class="member-content">
+              <div class="member-content-triangle"></div>
+              <div class="member-content-txt">
+                <button class="listimg-nochange"><img src="images/5.jpg" /></button>
+                <p>这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                </p>
+              </div>
+              <div class="member-content-bottombar">
+                <div class="member-content-bottom-rightspans">
+                  <span class="rspan"><button href="mylofter.html" style="color: #bdbdbd;">热度(18)</button></span>
+                  <span class="rspan"><button class="commentbutton" href="mylofter.html" style="color: #bdbdbd;">评论</button></span>
+                  <span class="rspan"><button href="mylofter.html" style="color: #bdbdbd;">分享</button></span>
+                  <span class="rspan"><button href="mylofter.html" style="color: #bdbdbd;">推荐</button></span>
+                  <span class="rspan"><button class="likebutton" href="mylofter.html" type="button"><img class="likeimg" id="nochange" src="icons/like.png" alt="" width="18px" height="18px"/></button></span>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div class="member-list">
-          <div class="member-img">
-            <a target="_blank" href="memberspace.html"><img class="member-img-size" src="images/3.jpg" /></a>
-          </div>
-          <div class="member-content">
-            <div class="member-content-triangle"></div>
-            <div class="member-content-txt">
-              <p>这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-              </p>
+            <div class="member-list-comment" id="hide">
+              <p>假装我写了一条评论</p>
+              <p>这个评论板块没做过</p>
+              <p>这个评论板块非常的丑</p>
+              <p>之后的评论板块都是复制粘贴的</p>
             </div>
-            <div class="member-content-bottombar">
-              <div class="member-content-bottom-rightspans">
-                <span class="rspan"><a href="mylofter.html" style="color: #bdbdbd;">热度(18)</a></span>
-                <span class="rspan"><a href="mylofter.html" style="color: #bdbdbd;">评论</a></span>
-                <span class="rspan"><a href="mylofter.html" style="color: #bdbdbd;">分享</a></span>
-                <span class="rspan"><a href="mylofter.html" style="color: #bdbdbd;">推荐</a></span>
-                <span class="rspan"><a href="mylofter.html" style="color: #bdbdbd;"><img src="icons/like.png" alt="" width="18px" height="18px"></a></span>
+          </div>
+ <div class="member-list">
+            <div class="member-img">
+              <a target="_blank" href="memberspaces/memberspace001.html"><img class="member-img-size" src="images/3.jpg" /></a>
+            </div>
+            <div class="member-content">
+              <div class="member-content-triangle"></div>
+              <div class="member-content-txt">
+                <button class="listimg-nochange"><img src="images/5.jpg" /></button>
+                <p>这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                </p>
+              </div>
+              <div class="member-content-bottombar">
+                <div class="member-content-bottom-rightspans">
+                  <span class="rspan"><button href="mylofter.html" style="color: #bdbdbd;">热度(18)</button></span>
+                  <span class="rspan"><button class="commentbutton" href="mylofter.html" style="color: #bdbdbd;">评论</button></span>
+                  <span class="rspan"><button href="mylofter.html" style="color: #bdbdbd;">分享</button></span>
+                  <span class="rspan"><button href="mylofter.html" style="color: #bdbdbd;">推荐</button></span>
+                  <span class="rspan"><button class="likebutton" href="mylofter.html" type="button"><img class="likeimg" id="nochange" src="icons/like.png" alt="" width="18px" height="18px"/></button></span>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div class="member-list">
-          <div class="member-img">
-            <a target="_blank" href="memberspace.html"><img class="member-img-size" src="images/3.jpg" /></a>
-          </div>
-          <div class="member-content">
-            <div class="member-content-triangle"></div>
-            <div class="member-content-txt">
-              <p>这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-              </p>
+            <div class="member-list-comment" id="hide">
+              <p>假装我写了一条评论</p>
+              <p>这个评论板块没做过</p>
+              <p>这个评论板块非常的丑</p>
+              <p>之后的评论板块都是复制粘贴的</p>
             </div>
-            <div class="member-content-bottombar">
-              <div class="member-content-bottom-rightspans">
-                <span class="rspan"><a href="mylofter.html" style="color: #bdbdbd;">热度(18)</a></span>
-                <span class="rspan"><a href="mylofter.html" style="color: #bdbdbd;">评论</a></span>
-                <span class="rspan"><a href="mylofter.html" style="color: #bdbdbd;">分享</a></span>
-                <span class="rspan"><a href="mylofter.html" style="color: #bdbdbd;">推荐</a></span>
-                <span class="rspan"><a href="mylofter.html" style="color: #bdbdbd;"><img src="icons/like.png" alt="" width="18px" height="18px"></a></span>
+          </div>
+          <div class="member-list">
+            <div class="member-img">
+              <a target="_blank" href="memberspaces/memberspace001.html"><img class="member-img-size" src="images/3.jpg" /></a>
+            </div>
+            <div class="member-content">
+              <div class="member-content-triangle"></div>
+              <div class="member-content-txt">
+                <button class="listimg-nochange"><img src="images/5.jpg" /></button>
+                <p>这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                </p>
+              </div>
+              <div class="member-content-bottombar">
+                <div class="member-content-bottom-rightspans">
+                  <span class="rspan"><button href="mylofter.html" style="color: #bdbdbd;">热度(18)</button></span>
+                  <span class="rspan"><button class="commentbutton" href="mylofter.html" style="color: #bdbdbd;">评论</button></span>
+                  <span class="rspan"><button href="mylofter.html" style="color: #bdbdbd;">分享</button></span>
+                  <span class="rspan"><button href="mylofter.html" style="color: #bdbdbd;">推荐</button></span>
+                  <span class="rspan"><button class="likebutton" href="mylofter.html" type="button"><img class="likeimg" id="nochange" src="icons/like.png" alt="" width="18px" height="18px"/></button></span>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div class="member-list">
-          <div class="member-img">
-            <a target="_blank" href="memberspace.html"><img class="member-img-size" src="images/3.jpg" /></a>
-          </div>
-          <div class="member-content">
-            <div class="member-content-triangle"></div>
-            <div class="member-content-txt">
-              <p>这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-              </p>
+            <div class="member-list-comment" id="hide">
+              <p>假装我写了一条评论</p>
+              <p>这个评论板块没做过</p>
+              <p>这个评论板块非常的丑</p>
+              <p>之后的评论板块都是复制粘贴的</p>
             </div>
-            <div class="member-content-bottombar">
-              <div class="member-content-bottom-rightspans">
-                <span class="rspan"><a href="mylofter.html" style="color: #bdbdbd;">热度(18)</a></span>
-                <span class="rspan"><a href="mylofter.html" style="color: #bdbdbd;">评论</a></span>
-                <span class="rspan"><a href="mylofter.html" style="color: #bdbdbd;">分享</a></span>
-                <span class="rspan"><a href="mylofter.html" style="color: #bdbdbd;">推荐</a></span>
-                <span class="rspan"><a href="mylofter.html" style="color: #bdbdbd;"><img src="icons/like.png" alt="" width="18px" height="18px"></a></span>
+          </div>
+          <div class="member-list">
+            <div class="member-img">
+              <a target="_blank" href="memberspaces/memberspace001.html"><img class="member-img-size" src="images/3.jpg" /></a>
+            </div>
+            <div class="member-content">
+              <div class="member-content-triangle"></div>
+              <div class="member-content-txt">
+                <button class="listimg-nochange"><img src="images/5.jpg" /></button>
+                <p>这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                </p>
+              </div>
+              <div class="member-content-bottombar">
+                <div class="member-content-bottom-rightspans">
+                  <span class="rspan"><button href="mylofter.html" style="color: #bdbdbd;">热度(18)</button></span>
+                  <span class="rspan"><button class="commentbutton" href="mylofter.html" style="color: #bdbdbd;">评论</button></span>
+                  <span class="rspan"><button href="mylofter.html" style="color: #bdbdbd;">分享</button></span>
+                  <span class="rspan"><button href="mylofter.html" style="color: #bdbdbd;">推荐</button></span>
+                  <span class="rspan"><button class="likebutton" href="mylofter.html" type="button"><img class="likeimg" id="nochange" src="icons/like.png" alt="" width="18px" height="18px"/></button></span>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div class="member-list">
-          <div class="member-img">
-            <a target="_blank" href="memberspace.html"><img class="member-img-size" src="images/3.jpg" /></a>
-          </div>
-          <div class="member-content">
-            <div class="member-content-triangle"></div>
-            <div class="member-content-txt">
-              <p>这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-              </p>
+            <div class="member-list-comment" id="hide">
+              <p>假装我写了一条评论</p>
+              <p>这个评论板块没做过</p>
+              <p>这个评论板块非常的丑</p>
+              <p>之后的评论板块都是复制粘贴的</p>
             </div>
-            <div class="member-content-bottombar">
-              <div class="member-content-bottom-rightspans">
-                <span class="rspan"><a href="mylofter.html" style="color: #bdbdbd;">热度(18)</a></span>
-                <span class="rspan"><a href="mylofter.html" style="color: #bdbdbd;">评论</a></span>
-                <span class="rspan"><a href="mylofter.html" style="color: #bdbdbd;">分享</a></span>
-                <span class="rspan"><a href="mylofter.html" style="color: #bdbdbd;">推荐</a></span>
-                <span class="rspan"><a href="mylofter.html" style="color: #bdbdbd;"><img src="icons/like.png" alt="" width="18px" height="18px"></a></span>
+          </div>
+          <div class="member-list">
+            <div class="member-img">
+              <a target="_blank" href="memberspaces/memberspace001.html"><img class="member-img-size" src="images/3.jpg" /></a>
+            </div>
+            <div class="member-content">
+              <div class="member-content-triangle"></div>
+              <div class="member-content-txt">
+                <button class="listimg-nochange"><img src="images/5.jpg" /></button>
+                <p>这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                </p>
+              </div>
+              <div class="member-content-bottombar">
+                <div class="member-content-bottom-rightspans">
+                  <span class="rspan"><button href="mylofter.html" style="color: #bdbdbd;">热度(18)</button></span>
+                  <span class="rspan"><button class="commentbutton" href="mylofter.html" style="color: #bdbdbd;">评论</button></span>
+                  <span class="rspan"><button href="mylofter.html" style="color: #bdbdbd;">分享</button></span>
+                  <span class="rspan"><button href="mylofter.html" style="color: #bdbdbd;">推荐</button></span>
+                  <span class="rspan"><button class="likebutton" href="mylofter.html" type="button"><img class="likeimg" id="nochange" src="icons/like.png" alt="" width="18px" height="18px"/></button></span>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div class="member-list">
-          <div class="member-img">
-            <a target="_blank" href="memberspace.html"><img class="member-img-size" src="images/3.jpg" /></a>
-          </div>
-          <div class="member-content">
-            <div class="member-content-triangle"></div>
-            <div class="member-content-txt">
-              <p>这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-              </p>
+            <div class="member-list-comment" id="hide">
+              <p>假装我写了一条评论</p>
+              <p>这个评论板块没做过</p>
+              <p>这个评论板块非常的丑</p>
+              <p>之后的评论板块都是复制粘贴的</p>
             </div>
-            <div class="member-content-bottombar">
-              <div class="member-content-bottom-rightspans">
-                <span class="rspan"><a href="mylofter.html" style="color: #bdbdbd;">热度(18)</a></span>
-                <span class="rspan"><a href="mylofter.html" style="color: #bdbdbd;">评论</a></span>
-                <span class="rspan"><a href="mylofter.html" style="color: #bdbdbd;">分享</a></span>
-                <span class="rspan"><a href="mylofter.html" style="color: #bdbdbd;">推荐</a></span>
-                <span class="rspan"><a href="mylofter.html" style="color: #bdbdbd;"><img src="icons/like.png" alt="" width="18px" height="18px"></a></span>
+          </div>
+          <div class="member-list">
+            <div class="member-img">
+              <a target="_blank" href="memberspaces/memberspace001.html"><img class="member-img-size" src="images/3.jpg" /></a>
+            </div>
+            <div class="member-content">
+              <div class="member-content-triangle"></div>
+              <div class="member-content-txt">
+                <button class="listimg-nochange"><img src="images/5.jpg" /></button>
+                <p>这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                </p>
+              </div>
+              <div class="member-content-bottombar">
+                <div class="member-content-bottom-rightspans">
+                  <span class="rspan"><button href="mylofter.html" style="color: #bdbdbd;">热度(18)</button></span>
+                  <span class="rspan"><button class="commentbutton" href="mylofter.html" style="color: #bdbdbd;">评论</button></span>
+                  <span class="rspan"><button href="mylofter.html" style="color: #bdbdbd;">分享</button></span>
+                  <span class="rspan"><button href="mylofter.html" style="color: #bdbdbd;">推荐</button></span>
+                  <span class="rspan"><button class="likebutton" href="mylofter.html" type="button"><img class="likeimg" id="nochange" src="icons/like.png" alt="" width="18px" height="18px"/></button></span>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div class="member-list">
-          <div class="member-img">
-            <a target="_blank" href="memberspace.html"><img class="member-img-size" src="images/3.jpg" /></a>
-          </div>
-          <div class="member-content">
-            <div class="member-content-triangle"></div>
-            <div class="member-content-txt">
-              <p>这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-              </p>
+            <div class="member-list-comment" id="hide">
+              <p>假装我写了一条评论</p>
+              <p>这个评论板块没做过</p>
+              <p>这个评论板块非常的丑</p>
+              <p>之后的评论板块都是复制粘贴的</p>
             </div>
-            <div class="member-content-bottombar">
-              <div class="member-content-bottom-rightspans">
-                <span class="rspan"><a href="mylofter.html" style="color: #bdbdbd;">热度(18)</a></span>
-                <span class="rspan"><a href="mylofter.html" style="color: #bdbdbd;">评论</a></span>
-                <span class="rspan"><a href="mylofter.html" style="color: #bdbdbd;">分享</a></span>
-                <span class="rspan"><a href="mylofter.html" style="color: #bdbdbd;">推荐</a></span>
-                <span class="rspan"><a href="mylofter.html" style="color: #bdbdbd;"><img src="icons/like.png" alt="" width="18px" height="18px"></a></span>
+          </div>
+          <div class="member-list">
+            <div class="member-img">
+              <a target="_blank" href="memberspaces/memberspace001.html"><img class="member-img-size" src="images/3.jpg" /></a>
+            </div>
+            <div class="member-content">
+              <div class="member-content-triangle"></div>
+              <div class="member-content-txt">
+                <button class="listimg-nochange"><img src="images/5.jpg" /></button>
+                <p>这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                  这里是还没有造的数据
+                </p>
+              </div>
+              <div class="member-content-bottombar">
+                <div class="member-content-bottom-rightspans">
+                  <span class="rspan"><button href="mylofter.html" style="color: #bdbdbd;">热度(18)</button></span>
+                  <span class="rspan"><button class="commentbutton" href="mylofter.html" style="color: #bdbdbd;">评论</button></span>
+                  <span class="rspan"><button href="mylofter.html" style="color: #bdbdbd;">分享</button></span>
+                  <span class="rspan"><button href="mylofter.html" style="color: #bdbdbd;">推荐</button></span>
+                  <span class="rspan"><button class="likebutton" href="mylofter.html" type="button"><img class="likeimg" id="nochange" src="icons/like.png" alt="" width="18px" height="18px"/></button></span>
+                </div>
               </div>
             </div>
+            <div class="member-list-comment" id="hide">
+              <p>假装我写了一条评论</p>
+              <p>这个评论板块没做过</p>
+              <p>这个评论板块非常的丑</p>
+              <p>之后的评论板块都是复制粘贴的</p>
+            </div>
           </div>
+ 
         </div>
-        <div class="member-list">
-          <div class="member-img">
-            <a target="_blank" href="memberspace.html"><img class="member-img-size" src="images/3.jpg" /></a>
-          </div>
-          <div class="member-content">
-            <div class="member-content-triangle"></div>
-            <div class="member-content-txt">
-              <p>这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-              </p>
-            </div>
-            <div class="member-content-bottombar">
-              <div class="member-content-bottom-rightspans">
-                <span class="rspan"><a href="mylofter.html" style="color: #bdbdbd;">热度(18)</a></span>
-                <span class="rspan"><a href="mylofter.html" style="color: #bdbdbd;">评论</a></span>
-                <span class="rspan"><a href="mylofter.html" style="color: #bdbdbd;">分享</a></span>
-                <span class="rspan"><a href="mylofter.html" style="color: #bdbdbd;">推荐</a></span>
-                <span class="rspan"><a href="mylofter.html" style="color: #bdbdbd;"><img src="icons/like.png" alt="" width="18px" height="18px"></a></span>
-              </div>
-            </div>
-          </div>
         </div>
-        <div class="member-list">
-          <div class="member-img">
-            <a target="_blank" href="memberspace.html"><img class="member-img-size" src="images/3.jpg" /></a>
-          </div>
-          <div class="member-content">
-            <div class="member-content-triangle"></div>
-            <div class="member-content-txt">
-              <p>这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-                这里是还没有造的数据
-              </p>
-            </div>
-            <div class="member-content-bottombar">
-              <div class="member-content-bottom-rightspans">
-                <span class="rspan"><a href="mylofter.html" style="color: #bdbdbd;">热度(18)</a></span>
-                <span class="rspan"><a href="mylofter.html" style="color: #bdbdbd;">评论</a></span>
-                <span class="rspan"><a href="mylofter.html" style="color: #bdbdbd;">分享</a></span>
-                <span class="rspan"><a href="mylofter.html" style="color: #bdbdbd;">推荐</a></span>
-                <span class="rspan"><a href="mylofter.html" style="color: #bdbdbd;"><img src="icons/like.png" alt="" width="18px" height="18px"></a></span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
       </div>
       <div id="mylofter-side-bar"><!--右部区块-->
-      <div id="mylofter-name-bar"><!--名称框-->
-        <div id="namebox">
-          <div id="nickname">
-            <p class="Nickname">小小黑</p>
-            <p class="Nickname">xiaoxiaohei45064</p>
+        <div id="mylofter-name-bar"><!--名称框-->
+          <div id="namebox">
+            <div id="nickname">
+              <p class="Nickname">小小黑</p>
+              <p class="Nickname">xiaoxiaohei45064</p>
+            </div>
+            <div class="huakuai">
+              <a><img class="huakuai" src="images/001.jpg"></a>
+            </div>
           </div>
-          <div class="huakuai">
-            <a><img class="huakuai" src="images/001.jpg"></a>
+          <div id="interestnum">
+            <a href="user/userspace.html" style="text-decoration: none;">
+              <div class="textstyle1">
+                <p>关  注</p>
+              </div>
+              <div class="textstyle2">
+                <p>40</p>
+              </div>
+            </a>
           </div>
         </div>
-        <div id="interestnum">
-          <a href="user/userspace.html" style="text-decoration: none;">
-            <div class="textstyle1">
-              <p>关  注</p>
+        <div id="mylofter-middle-bar"><!--中间列表块-->
+          <a id="mylofter-middle-bar-creater" href="user/creater.html" ><p id="mylofter-middle-bar-creater-p">创作者中心</p></a>
+          <div id="listbox">
+            <div class="line"></div>
+            <div id="list1" class="listitems">
+              <a class="list_link" href="user/userspace.html">文章</a>
             </div>
-            <div class="textstyle2">
-              <p>40</p>
+            <div class="line"></div>
+            <div id="list2" class="listitems">
+              <a class="list_link" href="user/userspace.html">合集</a>
             </div>
-          </a>
-        </div>
-      </div>
-      <div id="mylofter-middle-bar"><!--中间列表块-->
-        <a id="mylofter-middle-bar-creater" href="user/creater.html" ><p id="mylofter-middle-bar-creater-p">创作者中心</p></a>
-        <div id="listbox">
-          <div class="line"></div>
-          <div id="list1" class="listitems">
-            <a class="list_link" href="user/userspace.html">文章</a>
-          </div>
-          <div class="line"></div>
-          <div id="list2" class="listitems">
-            <a class="list_link" href="user/userspace.html">合集</a>
-          </div>
-          <div class="line"></div>
-          <div id="list3" class="listitems">
-            <a class="list_link" href="user/userspace.html">钱包</a>       
-          </div>
-          <div class="line"></div>
-          <div id="list4" class="listitems">
-            <a class="list_link" href="user/userspace.html">草稿</a>
-          </div>
-          <div class="line"></div>
-          <div id="list5" class="listitems">
-            <a style="color:gray;" class="list_link" href="user/userspace.html">个人主页设置</a>
-          </div>
-        </div>
-      </div>
-      <div class="mylofter-banner-bar"><!--横条广告块-->
-        <a class="mylofter-banner-bar" href="user/userspace.html" target="_blank"></a>
-      </div>
-      <div id="mylofter-img-bar"><!--图像广告块-->
-        <a id="mylofter-img-bar-link" href="user/userspace.html" target="_blank"><img src="images/001.jpg" height="200" width="230"/></a>
-      </div>
-      <div id="mylofter-download-bar"><!--二维码下载块-->
-        <div id="mylofter-QRcode-bar">
-          <div id="QRcode-title">
-            <p style="font-weight: bold;margin: 0px 0px 15px 0px;">使用手机访问Lofter</p>
-          </div>
-          <div class="QRcode">
-            <img class="QRcode-img" src="images/2.jpg" />
-            <div class="QRcode-information">
-              <p style="font-weight: bold;">安卓APP下载</p>
-              <p>扫码下载安卓Lofter APP</p>
+            <div class="line"></div>
+            <div id="list3" class="listitems">
+              <a class="list_link" href="user/userspace.html">钱包</a>       
             </div>
-          </div>
-          <div class="QRcode">
-            <img class="QRcode-img" src="images/3.jpg" />
-            <div class="QRcode-information" style="position: relative;bottom: 0px;">
-              <p style="font-weight: bold;" >微信小程序</p>
-              <p>使用微信扫码打开Lofter微信小程序</p>
+            <div class="line"></div>
+            <div id="list4" class="listitems">
+              <a class="list_link" href="user/userspace.html">草稿</a>
             </div>
-          </div>
-          <div class="QRcode">
-            <img class="QRcode-img" src="images/4.jpg" />
-            <div class="QRcode-information" style="position: relative;bottom: 0px;">
-              <p style="font-weight: bold;">QQ小程序</p>
-              <p>使用微信扫码打开Lofter QQ小程序</p>
-            </div>
-          </div>
-          <div class="QRcode">
-            <img class="QRcode-img" src="images/5.jpg" />
-            <div class="QRcode-information">
-              <p style="font-weight: bold;">苹果APP下载</p>
-              <p>扫码下载苹果Lofter APP</p>
+            <div class="line"></div>
+            <div id="list5" class="listitems">
+              <a style="color:gray;" class="list_link" href="user/userspace.html">个人主页设置</a>
             </div>
           </div>
         </div>
-      </div>
+        <div class="mylofter-banner-bar"><!--横条广告块-->
+          <a class="mylofter-banner-bar" href="user/userspace.html" target="_blank"></a>
+        </div>
+        <div id="mylofter-img-bar"><!--图像广告块-->
+          <a id="mylofter-img-bar-link" href="user/userspace.html" target="_blank"><img src="images/001.jpg" height="200" width="230"/></a>
+        </div>
+        <div id="mylofter-download-bar"><!--二维码下载块-->
+          <div id="mylofter-QRcode-bar">
+            <div id="QRcode-title">
+              <p style="font-weight: bold;margin: 0px 0px 15px 0px;">使用手机访问Lofter</p>
+            </div>
+            <div class="QRcode">
+              <img class="QRcode-img" src="images/2.jpg" />
+              <div class="QRcode-information">
+                <p style="font-weight: bold;">安卓APP下载</p>
+                <p>扫码下载安卓Lofter APP</p>
+              </div>
+            </div>
+            <div class="QRcode">
+              <img class="QRcode-img" src="images/3.jpg" />
+              <div class="QRcode-information" style="position: relative;bottom: 0px;">
+                <p style="font-weight: bold;" >微信小程序</p>
+                <p>使用微信扫码打开Lofter微信小程序</p>
+              </div>
+            </div>
+            <div class="QRcode">
+              <img class="QRcode-img" src="images/4.jpg" />
+              <div class="QRcode-information" style="position: relative;bottom: 0px;">
+                <p style="font-weight: bold;">QQ小程序</p>
+                <p>使用微信扫码打开Lofter QQ小程序</p>
+              </div>
+            </div>
+            <div class="QRcode">
+              <img class="QRcode-img" src="images/5.jpg" />
+              <div class="QRcode-information">
+                <p style="font-weight: bold;">苹果APP下载</p>
+                <p>扫码下载苹果Lofter APP</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
+  <script src="js/modal.js"></script>
+  <script src="js/likeclick.js"></script>
+  <script src="js/imgEnlarge.js"></script>
+  <script src="js/layoutComment.js"></script>
 </body>
 <footer></footer>
 </html>
